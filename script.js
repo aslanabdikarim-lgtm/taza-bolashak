@@ -35,9 +35,9 @@
    ========================================================= */
 window.I18N = {
   langs: {
-    ru: { locale: 'ru-RU', name: 'Русский', title: 'Чистое будущее начинается с нас — антикоррупционная платформа' },
-    en: { locale: 'en-US', name: 'English', title: 'A Clean Future Starts With Us — anti-corruption platform' },
-    kk: { locale: 'kk-KZ', name: 'Қазақша', title: 'Таза болашақ бізден басталады — сыбайлас жемқорлыққа қарсы платформа' }
+    ru: { locale: 'ru-RU', name: 'Русский', title: 'Таза болашақ — Чистое будущее начинается с нас' },
+    en: { locale: 'en-US', name: 'English', title: 'Taza Bolashaq — A Clean Future Starts With Us' },
+    kk: { locale: 'kk-KZ', name: 'Қазақша', title: 'Таза болашақ — бізден басталады' }
   },
 
   /* ---------------------------------------------------------
@@ -50,7 +50,7 @@ window.I18N = {
       'header.langAria': 'Site language',
       'header.themeAria': 'Toggle theme',
       'header.menuOpen': 'Open menu',
-      'brand.name': 'Clean Future',
+      'brand.name': 'Taza Bolashaq',
       'brand.tag': 'anti-corruption platform',
       'brand.tag2': 'starts with us',
       'nav.home': 'Home',
