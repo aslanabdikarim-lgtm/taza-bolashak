@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Чистое будущее начинается с нас — антикоррупционная платформа</title>
+  <meta name="description" content="Образовательная антикоррупционная платформа: калькулятор цены коррупции, колледж антикоррупции, комикс, видео, өтініш, ИИ-помощник, инструкции, шаблоны документов и аналитика." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&family=Russo+One&family=Rubik:wght@500;700;900&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script>
+    /* Применяем сохранённые тему и язык до отрисовки, чтобы не было мигания */
+    (function () {
+      try {
+        var theme = localStorage.getItem('cf-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.setAttribute('data-theme', theme);
+        var lang = localStorage.getItem('cf-lang');
+        if (lang === 'en' || lang === 'kk') document.documentElement.setAttribute('lang', lang);
+        /* Специальные возможности: применяем сохранённые настройки до отрисовки */
+        var a = JSON.parse(localStorage.getItem('cf-a11y') || 'null');
+        if (a && typeof a === 'object') {
+          var root = document.documentElement;
+          ['text', 'font', 'spacing', 'contrast'].forEach(function (k) { if (a[k]) root.setAttribute('data-a11y-' + k, String(a[k])); });
+          ['gray', 'motion', 'simple', 'noimg', 'links', 'targets', 'cursor', 'guide', 'speak'].forEach(function (k) { if (a[k] === true) root.classList.add('a11y-' + k); });
+          if (a.font === 'readable' || a.font === 'easy') {
+            var fl = document.createElement('link');
+            fl.rel = 'stylesheet'; fl.id = 'a11yFonts';
+            fl.href = 'https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Noto+Sans:wght@400;600;700;800&display=swap';
+            document.head.appendChild(fl);
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к основному содержимому</a>
+  <!-- Фоновые декоративные пятна -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" data-i18n-aria="header.homeAria" aria-label="На главную">
+        <span class="logo-mark"><i data-lucide="shield-check"></i></span>
+        <span class="logo-text">
+          <strong data-i18n="brand.name">Чистое будущее</strong>
+          <small data-i18n="brand.tag">антикоррупционная платформа</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" data-i18n-aria="header.navAria" aria-label="Основная навигация">
+        <a href="#calculator" class="nav-link" data-i18n="nav.calc">Калькулятор</a>
+        <a href="#school" class="nav-link" data-i18n="nav.school">Колледж</a>
+        <a href="#comic" class="nav-link" data-i18n="nav.comic">Комикс</a>
+        <a href="#video" class="nav-link" data-i18n="nav.video">Видео</a>
+        <a href="#help" class="nav-link" data-i18n="nav.help">Что делать</a>
+        <a href="#report" class="nav-link" data-i18n="nav.photo">Фото-сигнал</a>
+        <a href="#templates" class="nav-link" data-i18n="nav.templates">Шаблоны</a>
+        <a href="#analytics" class="nav-link" data-i18n="nav.analytics">Аналитика</a>
+        <a href="#community" class="nav-link" data-i18n="nav.community">Сообщество</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch hide-small" role="group" data-i18n-aria="header.langAria" aria-label="Язык сайта">
+          <button class="lang-btn active" data-lang="ru" lang="ru" title="Русский">RUS</button>
+          <button class="lang-btn" data-lang="en" lang="en" title="English">ENG</button>
+          <button class="lang-btn" data-lang="kk" lang="kk" title="Қазақша">KAZ</button>
+        </div>
+        <button class="icon-btn a11y-toggle" id="a11yToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="a11yPanel" data-i18n-aria="a11y.open" data-i18n-title="a11y.open" aria-label="Специальные возможности: версия для людей с ограниченными возможностями" title="Специальные возможности: версия для людей с ограниченными возможностями">
+          <i data-lucide="accessibility"></i>
+        </button>
+        <button class="icon-btn theme-toggle" id="themeToggle" data-i18n-aria="header.themeAria" data-i18n-title="header.themeAria" aria-label="Переключить тему" title="Переключить тему">
+          <i data-lucide="sun" class="icon-sun"></i>
+          <i data-lucide="moon" class="icon-moon"></i>
+        </button>
+        <button class="icon-btn burger" id="burger" data-i18n-aria="header.menuOpen" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="lang-switch lang-switch-wide" role="group" data-i18n-aria="header.langAria" aria-label="Язык сайта">
+      <button class="lang-btn active" data-lang="ru" lang="ru">RUS</button>
+      <button class="lang-btn" data-lang="en" lang="en">ENG</button>
+      <button class="lang-btn" data-lang="kk" lang="kk">KAZ</button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#home"><i data-lucide="house"></i><span data-i18n="nav.home">Главная</span></a>
+      <a href="#essays"><i data-lucide="pen-line"></i><span data-i18n="nav.essays">Эссе студентов</span></a>
+      <a href="#calculator"><i data-lucide="calculator"></i><span data-i18n="nav.calc">Калькулятор</span></a>
+      <a href="#school"><i data-lucide="graduation-cap"></i><span data-i18n="nav.schoolFull">Колледж антикоррупции</span></a>
+      <a href="#comic"><i data-lucide="book-image"></i><span data-i18n="nav.comic">Комикс</span></a>
+      <a href="#video"><i data-lucide="clapperboard"></i><span data-i18n="nav.videoFull">Видеоролик</span></a>
+      <a href="#help"><i data-lucide="life-buoy"></i><span data-i18n="nav.helpFull">Что делать, если…</span></a>
+      <a href="#report"><i data-lucide="camera"></i><span data-i18n="ot.tabReport">Сообщение с фото</span></a>
+      <a href="#templates"><i data-lucide="file-text"></i><span data-i18n="nav.templatesFull">Шаблоны документов</span></a>
+      <a href="#analytics"><i data-lucide="chart-column"></i><span data-i18n="nav.analyticsFull">Прозрачность и аналитика</span></a>
+      <a href="#community"><i data-lucide="users"></i><span data-i18n="nav.community">Сообщество</span></a>
+    </nav>
+    <button type="button" class="btn btn-ghost btn-block" data-a11y-open><i data-lucide="accessibility"></i><span data-i18n="a11y.title">Специальные возможности</span></button>
+    <a href="tel:1424" class="btn btn-primary btn-block"><i data-lucide="phone-call"></i><span data-i18n="nav.report">Сообщить о коррупции: 1424</span></a>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Учебное заведение и группа -->
+          <div class="institution glass reveal">
+            <div class="institution-emblem"><i data-lucide="landmark"></i></div>
+            <div class="institution-text">
+              <strong lang="kk">Жезқазған индустриалдық-гуманитарлық колледжі</strong>
+              <span data-i18n="college.name">Жезказганский индустриально-гуманитарный колледж</span>
+            </div>
+            <div class="institution-group">
+              <small data-i18n="college.group">Группа</small>
+              <b data-i18n="hero.groupCode">П-11</b>
+            </div>
+          </div>
+          <span class="badge reveal"><i data-lucide="sparkles"></i><span data-i18n="hero.badge">Образовательный проект о честности и прозрачности</span></span>
+          <h1 class="hero-title reveal">
+            <span data-i18n="hero.title1">Чистое будущее</span> <span class="gradient-text" data-i18n="hero.title2">начинается с нас</span>
+          </h1>
+          <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Вместе против коррупции. Вместе за справедливое общество. Узнай свои права, научись распознавать коррупцию и действовать законно — шаг за шагом.</p>
+          <div class="hero-actions reveal">
+            <a href="#school" class="btn btn-primary btn-lg"><i data-lucide="book-open"></i><span data-i18n="hero.more">Узнать больше</span></a>
+            <a href="#help" class="btn btn-ghost btn-lg"><i data-lucide="shield-alert"></i><span data-i18n="hero.whatToDo">Что делать при коррупции?</span></a>
+          </div>
+
+          <div class="hero-stats reveal">
+            <div class="stat-card glass">
+              <div class="stat-value"><span class="counter" data-target="38">0</span><small>/100</small></div>
+              <div class="stat-label" data-i18n="hero.stat1">баллов у Казахстана в Индексе восприятия коррупции 2025</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-value"><span class="counter" data-target="5">0</span><small data-i18n="hero.mln">млн+</small></div>
+              <div class="stat-label" data-i18n="hero.stat2">обращений подано через eOtinish за 2025 год</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-value"><span class="counter" data-target="1424" data-plain="true">0</span></div>
+              <div class="stat-label" data-i18n="hero.stat3">бесплатный call-центр по фактам коррупции</div>
+            </div>
+          </div>
+          <p class="source-note reveal" data-i18n="hero.sources">Источники: Transparency International (ИВК-2025), egov.kz (итоги eOtinish за 2025 год), egov.kz «Телефоны доверия госорганов».</p>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <svg class="hero-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gShield" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#22d3ee" />
+                <stop offset="55%" stop-color="#3b82f6" />
+                <stop offset="100%" stop-color="#1e3a8a" />
+              </linearGradient>
+              <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#a5f3fc" />
+              </linearGradient>
+              <radialGradient id="gGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#22d3ee" stop-opacity=".55" />
+                <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle cx="260" cy="260" r="240" fill="url(#gGlow)" />
+            <g class="orbit orbit-1">
+              <circle cx="260" cy="260" r="215" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4 10" />
+              <circle cx="475" cy="260" r="8" fill="#22d3ee" />
+            </g>
+            <g class="orbit orbit-2">
+              <circle cx="260" cy="260" r="170" fill="none" stroke="currentColor" stroke-opacity=".14" />
+              <circle cx="90" cy="260" r="6" fill="#60a5fa" />
+              <circle cx="260" cy="90" r="5" fill="#2dd4bf" />
+            </g>
+            <path class="shield" d="M260 95 L380 140 V255 C380 335 330 395 260 425 C190 395 140 335 140 255 V140 Z" fill="url(#gShield)" />
+            <path d="M260 120 L358 157 V255 C358 322 317 373 260 399 C203 373 162 322 162 255 V157 Z" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" />
+            <g class="scales" stroke="url(#gGold)" stroke-width="7" stroke-linecap="round" fill="none">
+              <line x1="260" y1="180" x2="260" y2="335" />
+              <line x1="205" y1="335" x2="315" y2="335" />
+              <g class="beam">
+                <line x1="195" y1="205" x2="325" y2="205" />
+                <line x1="195" y1="205" x2="178" y2="255" stroke-width="3" />
+                <line x1="195" y1="205" x2="212" y2="255" stroke-width="3" />
+                <line x1="325" y1="205" x2="308" y2="255" stroke-width="3" />
+                <line x1="325" y1="205" x2="342" y2="255" stroke-width="3" />
+                <path d="M172 255 Q195 285 218 255 Z" fill="#ffffff" fill-opacity=".9" stroke-width="3" />
+                <path d="M302 255 Q325 285 348 255 Z" fill="#ffffff" fill-opacity=".9" stroke-width="3" />
+              </g>
+              <circle cx="260" cy="175" r="9" fill="#ffffff" stroke="none" />
+            </g>
+            <g class="float-chip chip-1">
+              <rect x="20" y="110" rx="16" width="150" height="54" fill="#0b1b3a" fill-opacity=".75" stroke="#22d3ee" stroke-opacity=".5" />
+              <circle cx="46" cy="137" r="11" fill="#22d3ee" />
+              <path d="M40 137 l4 4 l8 -9" stroke="#0b1b3a" stroke-width="3" fill="none" stroke-linecap="round" />
+              <text x="66" y="134" fill="#e2f3ff" font-size="13" font-family="Manrope, sans-serif" font-weight="700" data-i18n="hero.chip1a">Прозрачность</text>
+              <text x="66" y="151" fill="#9fb4d6" font-size="11" font-family="Manrope, sans-serif" data-i18n="hero.chip1b">открытые данные</text>
+            </g>
+            <g class="float-chip chip-2">
+              <rect x="360" y="380" rx="16" width="150" height="54" fill="#0b1b3a" fill-opacity=".75" stroke="#60a5fa" stroke-opacity=".5" />
+              <circle cx="386" cy="407" r="11" fill="#60a5fa" />
+              <path d="M381 407 h10 M386 402 v10" stroke="#0b1b3a" stroke-width="3" stroke-linecap="round" />
+              <text x="406" y="404" fill="#e2f3ff" font-size="13" font-family="Manrope, sans-serif" font-weight="700" data-i18n="hero.chip2a">Закон</text>
+              <text x="406" y="421" fill="#9fb4d6" font-size="11" font-family="Manrope, sans-serif" data-i18n="hero.chip2b">равный для всех</text>
+            </g>
+            <g class="float-chip chip-3">
+              <rect x="350" y="70" rx="16" width="140" height="54" fill="#0b1b3a" fill-opacity=".75" stroke="#2dd4bf" stroke-opacity=".5" />
+              <circle cx="376" cy="97" r="11" fill="#2dd4bf" />
+              <path d="M370 97 h12" stroke="#0b1b3a" stroke-width="3" stroke-linecap="round" />
+              <text x="396" y="94" fill="#e2f3ff" font-size="13" font-family="Manrope, sans-serif" font-weight="700" data-i18n="hero.chip3a">Контроль</text>
+              <text x="396" y="111" fill="#9fb4d6" font-size="11" font-family="Manrope, sans-serif" data-i18n="hero.chip3b">общественный</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <a href="#essays" class="scroll-hint" data-i18n-aria="hero.scrollAria" aria-label="Прокрутить вниз"><i data-lucide="chevrons-down"></i></a>
+    </section>
+
+    <!-- ===================== ЭССЕ СТУДЕНТОВ ===================== -->
+    <section class="section section-alt" id="essays">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="pen-line"></i><span data-i18n="es.eyebrow">Эссе · группа П-11</span></span>
+          <h2 class="section-title" data-i18n="es.title">Честность начинается с нас</h2>
+          <p class="section-text" data-i18n="es.text">Три студента — три взгляда на то, как построить Казахстан без коррупции. Нажмите на фото, чтобы прочитать или послушать эссе.</p>
+        </div>
+        <div class="essay-grid" id="essayGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== КАЛЬКУЛЯТОР ===================== -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="calculator"></i><span data-i18n="calc.eyebrow">Интерактив</span></span>
+          <h2 class="section-title" data-i18n="calc.title">Калькулятор «Цена коррупции»</h2>
+          <p class="section-text" data-i18n="calc.text">Выберите сферу и сумму взятки — и посмотрите, что общество могло бы получить на эти деньги вместо того, чтобы они ушли в чей-то карман.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-panel glass reveal">
+            <h3 class="panel-title"><span class="step-num">1</span><span data-i18n="calc.step1">Выберите сферу</span></h3>
+            <div class="sphere-grid" id="sphereGrid" role="radiogroup" data-i18n-aria="calc.sphereAria" aria-label="Сфера">
+              <button class="sphere-btn active" data-sphere="education" role="radio" aria-checked="true"><i data-lucide="graduation-cap"></i><span data-i18n="sphere.education">Образование</span></button>
+              <button class="sphere-btn" data-sphere="medicine" role="radio" aria-checked="false"><i data-lucide="heart-pulse"></i><span data-i18n="sphere.medicine">Медицина</span></button>
+              <button class="sphere-btn" data-sphere="roads" role="radio" aria-checked="false"><i data-lucide="construction"></i><span data-i18n="sphere.roads">Дороги</span></button>
+              <button class="sphere-btn" data-sphere="housing" role="radio" aria-checked="false"><i data-lucide="building-2"></i><span data-i18n="sphere.housing">ЖКХ</span></button>
+            </div>
+
+            <h3 class="panel-title"><span class="step-num">2</span><span data-i18n="calc.step2">Укажите сумму взятки</span></h3>
+            <div class="amount-display"><span id="amountValue">1 000 000</span> <small>₸</small></div>
+            <input type="range" id="amountSlider" min="0" max="1000" value="500" step="1" class="slider" data-i18n-aria="calc.amountAria" aria-label="Сумма взятки" />
+            <div class="slider-scale"><span data-i18n="calc.scale1">10 тыс. ₸</span><span data-i18n="calc.scale2">1 млн ₸</span><span data-i18n="calc.scale3">100 млн ₸</span></div>
+
+            <h3 class="panel-title"><span class="step-num">3</span><span data-i18n="calc.step3">Как часто это происходит?</span></h3>
+            <div class="freq-group" id="freqGroup">
+              <button class="chip active" data-freq="1" data-i18n="calc.freq1">Один раз</button>
+              <button class="chip" data-freq="12" data-i18n="calc.freq12">Каждый месяц (×12)</button>
+              <button class="chip" data-freq="100" data-i18n="calc.freq100">В 100 учреждениях</button>
+            </div>
+
+            <button class="btn btn-primary btn-block btn-lg" id="calcBtn"><i data-lucide="sparkles"></i><span data-i18n="calc.btn">Рассчитать</span></button>
+            <p class="disclaimer"><i data-lucide="info"></i><span data-i18n="calc.disclaimer">Все цены — условные демонстрационные значения для наглядности, а не официальные государственные данные.</span></p>
+          </div>
+
+          <div class="calc-result glass reveal" id="calcResult">
+            <div class="result-empty" id="resultEmpty">
+              <div class="empty-icon"><i data-lucide="coins"></i></div>
+              <h3 data-i18n="calc.emptyTitle">Здесь появится результат</h3>
+              <p data-i18n="calc.emptyText">Выберите сферу, сумму и частоту, затем нажмите «Рассчитать».</p>
+            </div>
+            <div class="result-body hidden" id="resultBody">
+              <div class="result-head">
+                <div>
+                  <p class="result-caption" data-i18n="calc.total">Общая сумма потерь для общества</p>
+                  <div class="result-total"><span id="resultTotal">0</span> ₸</div>
+                </div>
+                <span class="result-sphere" id="resultSphere"></span>
+              </div>
+              <p class="result-caption" data-i18n-html="calc.couldBuy">На эти деньги можно было бы приобрести <b>(каждый вариант — на всю сумму)</b>:</p>
+              <div class="result-items" id="resultItems"></div>
+              <div class="result-chart-wrap">
+                <p class="result-caption" data-i18n="calc.otherSpheres">Та же сумма в других сферах</p>
+                <div class="chart-box chart-box-sm"><canvas id="calcChart" role="img" data-i18n-aria="calc.otherSpheres" aria-label="Та же сумма в других сферах"></canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ШКОЛА АНТИКОРРУПЦИИ ===================== -->
+    <section class="section section-alt" id="school">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="graduation-cap"></i><span data-i18n="school.eyebrow">Обучение</span></span>
+          <h2 class="section-title" data-i18n="school.title">Колледж антикоррупции</h2>
+          <p class="section-text" data-i18n="school.text">Играйте, проверяйте знания и разбирайтесь в ключевых понятиях — коротко, понятно и на примерах из жизни.</p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" data-i18n-aria="school.tabsAria" aria-label="Разделы колледжа">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="game"><i data-lucide="gamepad-2"></i><span data-i18n="school.tabGame">Взятка или подарок?</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="quiz"><i data-lucide="list-checks"></i><span data-i18n="school.tabQuiz">Знаешь ли ты свои права?</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="concepts"><i data-lucide="layout-grid"></i><span data-i18n="school.tabConcepts">Основные понятия</span></button>
+        </div>
+
+        <!-- Игра -->
+        <div class="tab-panel active" id="tab-game" role="tabpanel">
+          <div class="game-card glass">
+            <div class="game-top">
+              <div class="progress-wrap">
+                <div class="progress-label"><span data-i18n="game.situation">Ситуация</span> <span id="gameStep">1</span> <span data-i18n="common.of">из</span> <span id="gameTotal">8</span></div>
+                <div class="progress"><div class="progress-bar" id="gameProgress"></div></div>
+              </div>
+              <div class="score-pill"><i data-lucide="star"></i><span id="gameScore">0</span> <span data-i18n="game.points">очков</span></div>
+            </div>
+
+            <div id="gamePlay">
+              <div class="situation">
+                <div class="situation-icon" id="gameIcon"><i data-lucide="gift"></i></div>
+                <div>
+                  <h3 id="gameTitle"></h3>
+                  <p id="gameText"></p>
+                </div>
+              </div>
+              <div class="game-answers">
+                <button class="answer-btn bribe" data-answer="bribe"><i data-lucide="ban"></i><span data-i18n="game.bribe">Взятка / недопустимо</span></button>
+                <button class="answer-btn gift" data-answer="gift"><i data-lucide="gift"></i><span data-i18n="game.gift">Допустимый подарок</span></button>
+              </div>
+              <div class="feedback hidden" id="gameFeedback">
+                <div class="feedback-head"><span id="gameVerdictIcon"></span><strong id="gameVerdict"></strong></div>
+                <p id="gameExplain"></p>
+                <button class="btn btn-primary" id="gameNext"></button>
+              </div>
+            </div>
+
+            <div class="game-final hidden" id="gameFinal">
+              <div class="final-ring" id="gameRing"><span id="gameFinalPercent">0%</span></div>
+              <h3 id="gameFinalTitle"></h3>
+              <p id="gameFinalText"></p>
+              <button class="btn btn-primary" id="gameRestart"><i data-lucide="rotate-ccw"></i><span data-i18n="game.restart">Сыграть ещё раз</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Тест -->
+        <div class="tab-panel" id="tab-quiz" role="tabpanel">
+          <div class="game-card glass">
+            <div id="quizStart" class="quiz-start">
+              <div class="empty-icon"><i data-lucide="scale"></i></div>
+              <h3 data-i18n="quiz.title">Тест «Знаешь ли ты свои права?»</h3>
+              <p data-i18n="quiz.intro">12 вопросов о правах граждан при общении с полицией, медицинскими учреждениями и государственными органами.</p>
+              <p class="disclaimer"><i data-lucide="info"></i><span data-i18n="quiz.disclaimer">Тест носит образовательный характер и не является юридической консультацией. Актуальные тексты законов — на портале adilet.zan.kz.</span></p>
+              <button class="btn btn-primary btn-lg" id="quizBegin"><i data-lucide="play"></i><span data-i18n="quiz.begin">Начать тест</span></button>
+            </div>
+
+            <div id="quizPlay" class="hidden">
+              <div class="game-top">
+                <div class="progress-wrap">
+                  <div class="progress-label"><span data-i18n="quiz.question">Вопрос</span> <span id="quizStep">1</span> <span data-i18n="common.of">из</span> <span id="quizTotal">12</span> · <span id="quizCategory"></span></div>
+                  <div class="progress"><div class="progress-bar" id="quizProgress"></div></div>
+                </div>
+                <div class="score-pill"><i data-lucide="circle-check"></i><span id="quizScore">0</span> <span data-i18n="quiz.correctShort">верно</span></div>
+              </div>
+              <h3 class="quiz-question" id="quizQuestion"></h3>
+              <div class="quiz-options" id="quizOptions"></div>
+              <div class="feedback hidden" id="quizFeedback">
+                <p id="quizExplain"></p>
+                <button class="btn btn-primary" id="quizNext"></button>
+              </div>
+            </div>
+
+            <div id="quizResult" class="game-final hidden">
+              <div class="final-ring" id="quizRing"><span id="quizPercent">0%</span></div>
+              <h3 id="quizResultTitle"></h3>
+              <p id="quizResultText"></p>
+              <div class="result-stats">
+                <div><strong id="quizRight">0</strong><span data-i18n="quiz.right">правильно</span></div>
+                <div><strong id="quizWrong">0</strong><span data-i18n="quiz.wrong">с ошибкой</span></div>
+                <div><strong id="quizBest">0%</strong><span data-i18n="quiz.best">лучший результат</span></div>
+              </div>
+              <button class="btn btn-primary" id="quizRestart"><i data-lucide="rotate-ccw"></i><span data-i18n="quiz.restart">Пройти заново</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Понятия -->
+        <div class="tab-panel" id="tab-concepts" role="tabpanel">
+          <p class="hint-line"><i data-lucide="mouse-pointer-click"></i><span data-i18n="concepts.hint">Нажмите на карточку, чтобы узнать подробности и примеры из жизни.</span></p>
+          <div class="concept-grid" id="conceptGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== КОМИКС ===================== -->
+    <section class="section" id="comic">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="book-image"></i><span data-i18n="comic.eyebrow">Комикс</span></span>
+          <h2 class="section-title" data-i18n="comic.sectionTitle">История Дамира: «Зачёт за конверт?»</h2>
+          <p class="section-text" data-i18n="comic.sectionText">Короткая история о выборе, который делает каждый студент. Нажмите на любой кадр, чтобы читать комикс покадрово.</p>
+        </div>
+
+        <article class="comic reveal" id="comicPage" data-accent="red">
+          <header class="comic-head">
+            <div class="comic-head-text">
+              <div class="comic-kicker" data-i18n="comic.kicker">Комикс об антикоррупции</div>
+              <h3 class="comic-title" data-i18n="comic.title">ЗАЧЁТ ЗА КОНВЕРТ?</h3>
+            </div>
+            <div class="comic-stamp" data-i18n="comic.stamp">СЕССИЯ</div>
+          </header>
+
+          <div class="comic-grid">
+            <!-- Кадр 1: ночь перед экзаменом -->
+            <button class="comic-panel" data-panel="0" style="background:#1E2A4A" data-i18n-aria="comic.p1aria" aria-label="Кадр 1">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht1" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.4" fill="#ffffff" opacity="0.12"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht1)"></rect>
+                <rect x="300" y="40" width="110" height="110" fill="#2E4170" stroke="#141414" stroke-width="4"></rect>
+                <path d="M355,40 L355,150 M300,95 L410,95" stroke="#141414" stroke-width="4"></path>
+                <circle cx="330" cy="70" r="16" fill="#FFF3B0"></circle><circle cx="337" cy="65" r="14" fill="#2E4170"></circle>
+                <path d="M60,90 L90,150 L30,150 Z" fill="#FFD84D" opacity="0.35"></path>
+                <path d="M60,250 L60,100 L90,80" fill="none" stroke="#141414" stroke-width="6"></path>
+                <path d="M74,70 L106,70 L114,92 L66,92 Z" fill="#FFD84D" stroke="#141414" stroke-width="3"></path>
+                <path d="M90,92 L30,262 L170,262 Z" fill="#FFD84D" opacity="0.25"></path>
+                <g transform="translate(240,330)">
+                  <path d="M-62,0 L-54,-90 Q0,-112 54,-90 L62,0 Z" fill="#1B998B" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-54,-80 L-40,-150 M54,-80 L40,-150" stroke="#141414" stroke-width="18" stroke-linecap="round"></path>
+                  <path d="M-54,-80 L-40,-150 M54,-80 L40,-150" stroke="#1B998B" stroke-width="12" stroke-linecap="round"></path>
+                  <circle cx="0" cy="-140" r="34" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-35,-142 Q-40,-182 -6,-180 L0,-190 L8,-178 Q38,-180 35,-142 Q24,-160 0,-158 Q-20,-162 -35,-142 Z" fill="#2A1E18" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="-38" cy="-150" r="12" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <circle cx="38" cy="-150" r="12" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-18,-138 L-6,-134 M18,-138 L6,-134" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="-11" cy="-128" r="3.5" fill="#141414"></circle><circle cx="11" cy="-128" r="3.5" fill="#141414"></circle>
+                  <ellipse cx="0" cy="-112" rx="8" ry="6" fill="#141414"></ellipse>
+                  <path d="M22,-122 Q26,-112 22,-106" fill="#8EC5FF" stroke="#141414" stroke-width="2"></path>
+                </g>
+                <rect x="0" y="262" width="442" height="108" fill="#6B4F3A" stroke="#141414" stroke-width="4"></rect>
+                <path d="M150,262 L200,248 L250,262 L300,248 L350,262 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                <rect x="40" y="236" width="70" height="26" fill="#D7263D" stroke="#141414" stroke-width="3"></rect>
+                <rect x="46" y="214" width="62" height="22" fill="#2B59C3" stroke="#141414" stroke-width="3"></rect>
+                <rect x="370" y="226" width="30" height="36" fill="#fff" stroke="#141414" stroke-width="3"></rect>
+                <path d="M400,234 Q414,244 400,254" fill="none" stroke="#141414" stroke-width="3"></path>
+                <path d="M378,218 Q372,206 380,196 M390,218 Q384,206 392,196" fill="none" stroke="#fff" stroke-width="2"></path>
+              </svg>
+              <span class="cm-caption" data-i18n="comic.p1caption">Ночь перед экзаменом. 03:47.</span>
+              <span class="cm-bubble" style="left:27%;top:14.6%;width:38%"><span data-i18n="comic.p1bubble">Я НИЧЕГО не знаю… Мне конец!</span><i class="cm-tail" style="left:56%"></i></span>
+              <span class="cm-num">1</span>
+            </button>
+
+            <!-- Кадр 2: друг предлагает скинуться -->
+            <button class="comic-panel" data-panel="1" style="background:#F4A259" data-i18n-aria="comic.p2aria" aria-label="Кадр 2">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht2" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.8" fill="#FFD84D" opacity="0.6"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht2)"></rect>
+                <g transform="translate(130,380)">
+                  <path d="M-70,0 L-62,-130 Q0,-152 62,-130 L70,0 Z" fill="#FF7F11" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-180" r="40" fill="#C98E62" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-41,-186 Q-40,-226 0,-226 Q40,-226 41,-186 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-38,-192 L-80,-186 L-40,-180 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-20,-188 Q-12,-196 -4,-188 M6,-188 Q14,-196 22,-188" fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M-20,-166 Q0,-142 22,-166 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                  <path d="M62,-110 L96,-160 L120,-196" fill="none" stroke="#141414" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M62,-110 L96,-160 L120,-196" fill="none" stroke="#FF7F11" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="122" cy="-200" r="11" fill="#C98E62" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M116,-212 L120,-232 M126,-212 L132,-230" stroke="#141414" stroke-width="7" stroke-linecap="round"></path>
+                  <path d="M116,-212 L120,-232 M126,-212 L132,-230" stroke="#C98E62" stroke-width="3" stroke-linecap="round"></path>
+                </g>
+                <g transform="translate(330,270) rotate(10)">
+                  <rect x="-48" y="-30" width="96" height="60" fill="#7BC67E" stroke="#141414" stroke-width="3"></rect>
+                  <rect x="-38" y="-38" width="96" height="60" fill="#8ED081" stroke="#141414" stroke-width="3"></rect>
+                  <circle cx="10" cy="-8" r="16" fill="none" stroke="#141414" stroke-width="3"></circle>
+                  <text x="10" y="-1" text-anchor="middle" font-family="Russo One, sans-serif" font-size="18" fill="#141414">₸</text>
+                </g>
+              </svg>
+              <span class="cm-caption" data-i18n="comic.p2caption">Утром одногруппник Ерлан:</span>
+              <span class="cm-bubble" style="right:3%;top:13.5%;width:50%"><span data-i18n="comic.p2bubble">Не парься, бро! Вся группа скидывается по 20 тысяч — и все сдали. Староста отнесёт.</span><i class="cm-tail" style="left:11%"></i></span>
+              <span class="cm-num">2</span>
+            </button>
+
+            <!-- Кадр 3: мысль о будущем -->
+            <button class="comic-panel" data-panel="2" style="background:#CDB4DB" data-i18n-aria="comic.p3aria" aria-label="Кадр 3">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht3" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.6" fill="#141414" opacity="0.1"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht3)"></rect>
+                <g transform="translate(90,390)">
+                  <path d="M-62,0 L-54,-90 Q0,-112 54,-90 L62,0 Z" fill="#1B998B" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-140" r="34" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-35,-142 Q-40,-182 -6,-180 L0,-190 L8,-178 Q38,-180 35,-142 Q24,-160 0,-158 Q-20,-162 -35,-142 Z" fill="#2A1E18" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="-4" cy="-138" r="3.5" fill="#141414"></circle><circle cx="18" cy="-138" r="3.5" fill="#141414"></circle>
+                  <path d="M-2,-118 L16,-120" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M-8,-152 L4,-150 M12,-150 L24,-154" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                </g>
+                <circle cx="140" cy="210" r="7" fill="#fff" stroke="#141414" stroke-width="3"></circle>
+                <circle cx="160" cy="185" r="11" fill="#fff" stroke="#141414" stroke-width="3"></circle>
+                <path d="M180,160 Q160,140 180,120 Q172,90 205,86 Q215,56 255,66 Q285,40 318,64 Q358,56 368,90 Q404,100 396,134 Q420,160 392,180 Q396,214 360,214 Q340,236 306,222 Q280,240 252,222 Q222,236 204,212 Q172,206 180,160 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                <g transform="translate(290,205)">
+                  <path d="M-36,0 L-30,-62 Q0,-74 30,-62 L36,0 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-14,-66 L-18,-30 Q-18,-14 -4,-14" fill="none" stroke="#2B59C3" stroke-width="3"></path>
+                  <circle cx="-4" cy="-14" r="5" fill="#2B59C3" stroke="#141414" stroke-width="2"></circle>
+                  <circle cx="0" cy="-92" r="22" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-23,-94 Q-26,-118 0,-118 Q26,-118 23,-94 Q12,-104 0,-102 Q-12,-104 -23,-94 Z" fill="#2A1E18" stroke="#141414" stroke-width="2.5"></path>
+                  <circle cx="-8" cy="-92" r="3" fill="#141414"></circle><circle cx="8" cy="-92" r="3" fill="#141414"></circle>
+                  <path d="M-8,-80 Q0,-86 8,-80" fill="none" stroke="#141414" stroke-width="2.5" stroke-linecap="round"></path>
+                  <text x="40" y="-90" font-family="Russo One, sans-serif" font-size="30" fill="#D7263D">?!</text>
+                </g>
+                <g transform="translate(230,180)">
+                  <rect x="-34" y="-30" width="40" height="44" fill="#fff" stroke="#141414" stroke-width="3"></rect>
+                  <path d="M-26,-18 L-2,-18 M-26,-8 L-6,-8 M-26,2 L-10,2" stroke="#141414" stroke-width="2"></path>
+                  <text x="-14" y="-36" text-anchor="middle" font-family="Russo One, sans-serif" font-size="12" fill="#141414" data-i18n="comic.svgDiagnosis">ДИАГНОЗ</text>
+                </g>
+              </svg>
+              <span class="cm-caption cm-caption-wide" data-i18n="comic.p3caption">Дамир учится на врача. И тут он подумал…</span>
+              <span class="cm-bubble cm-thought" style="left:45%;top:67%;width:48%"><span data-i18n="comic.p3bubble">А потом я буду лечить людей… по купленным оценкам?</span></span>
+              <span class="cm-num">3</span>
+            </button>
+
+            <!-- Кадр 4: отказ -->
+            <button class="comic-panel" data-panel="3" style="background:#2B59C3" data-i18n-aria="comic.p4aria" aria-label="Кадр 4">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht4" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.8" fill="#ffffff" opacity="0.2"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht4)"></rect>
+                <g stroke="#ffffff" stroke-width="3" opacity="0.35">
+                  <path d="M221,240 L0,40 M221,240 L120,0 M221,240 L320,0 M221,240 L442,40 M221,240 L442,200 M221,240 L0,200"></path>
+                </g>
+                <g transform="translate(221,440)">
+                  <path d="M-96,0 L-84,-170 Q0,-198 84,-170 L96,0 Z" fill="#1B998B" stroke="#141414" stroke-width="4"></path>
+                  <path d="M-30,-180 Q0,-150 30,-180" fill="none" stroke="#141414" stroke-width="4"></path>
+                  <path d="M-14,-166 L-16,-130 M14,-166 L16,-130" stroke="#fff" stroke-width="4" stroke-linecap="round"></path>
+                  <circle cx="0" cy="-232" r="58" fill="#E8B48A" stroke="#141414" stroke-width="4"></circle>
+                  <path d="M-60,-236 Q-68,-304 -10,-300 L0,-318 L14,-298 Q66,-304 60,-236 Q42,-266 0,-262 Q-34,-268 -60,-236 Z" fill="#2A1E18" stroke="#141414" stroke-width="4"></path>
+                  <path d="M-38,-246 L-14,-238 M38,-246 L14,-238" stroke="#141414" stroke-width="5" stroke-linecap="round"></path>
+                  <circle cx="-22" cy="-226" r="5.5" fill="#141414"></circle><circle cx="22" cy="-226" r="5.5" fill="#141414"></circle>
+                  <path d="M-18,-196 L18,-196" stroke="#141414" stroke-width="5" stroke-linecap="round"></path>
+                </g>
+                <g transform="translate(80,250) rotate(-10)">
+                  <rect x="-38" y="-48" width="76" height="96" fill="#fff" stroke="#141414" stroke-width="4"></rect>
+                  <path d="M-26,-30 L26,-30 M-26,-14 L26,-14 M-26,2 L18,2 M-26,18 L26,18 M-26,32 L10,32" stroke="#141414" stroke-width="3"></path>
+                  <text x="0" y="-56" text-anchor="middle" font-family="Russo One, sans-serif" font-size="14" fill="#fff" data-i18n="comic.svgNotes">КОНСПЕКТ</text>
+                </g>
+                <g transform="translate(365,250) rotate(8)">
+                  <rect x="-40" y="-26" width="80" height="52" fill="#8ED081" stroke="#141414" stroke-width="4"></rect>
+                  <circle r="16" fill="none" stroke="#141414" stroke-width="3"></circle>
+                  <circle r="44" fill="none" stroke="#D7263D" stroke-width="8"></circle>
+                  <path d="M-31,-31 L31,31" stroke="#D7263D" stroke-width="8" stroke-linecap="round"></path>
+                </g>
+              </svg>
+              <span class="cm-bubble cm-shout" style="left:50%;top:5%;width:68%;transform:translateX(-50%)"><span data-i18n="comic.p4bubble">НЕТ. Я лучше сам выучу.</span><i class="cm-tail" style="left:46%"></i></span>
+              <span class="cm-caption cm-caption-bottom" data-i18n="comic.p4caption">Остаток ночи — конспекты и кофе.</span>
+              <span class="cm-num">4</span>
+            </button>
+
+            <!-- Кадр 5: на экзамене -->
+            <button class="comic-panel" data-panel="4" style="background:#D9D4C7" data-i18n-aria="comic.p5aria" aria-label="Кадр 5">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht5" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.6" fill="#141414" opacity="0.12"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht5)"></rect>
+                <rect x="20" y="30" width="200" height="110" fill="#2F4F3A" stroke="#141414" stroke-width="5"></rect>
+                <text x="120" y="80" text-anchor="middle" font-family="Rubik, sans-serif" font-weight="700" font-size="22" fill="#fff" data-i18n="comic.svgExam">ЭКЗАМЕН</text>
+                <text x="120" y="110" text-anchor="middle" font-family="Rubik, sans-serif" font-size="16" fill="#fff" data-i18n="comic.svgAnatomy">Анатомия</text>
+                <g transform="translate(110,380)">
+                  <path d="M-66,0 L-58,-120 Q0,-140 58,-120 L66,0 Z" fill="#6A4C93" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-16,-128 L0,-90 L16,-128 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-168" r="36" fill="#F2C49B" stroke="#141414" stroke-width="3"></circle>
+                  <circle cx="0" cy="-214" r="18" fill="#3B2A20" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-37,-170 Q-38,-206 0,-206 Q38,-206 37,-170 Q20,-190 0,-188 Q-20,-190 -37,-170 Z" fill="#3B2A20" stroke="#141414" stroke-width="3"></path>
+                  <rect x="-26" y="-176" width="20" height="14" rx="4" fill="#fff" stroke="#141414" stroke-width="3"></rect>
+                  <rect x="6" y="-176" width="20" height="14" rx="4" fill="#fff" stroke="#141414" stroke-width="3"></rect>
+                  <circle cx="-16" cy="-169" r="3" fill="#141414"></circle><circle cx="16" cy="-169" r="3" fill="#141414"></circle>
+                  <path d="M-24,-186 L-8,-182 M24,-186 L8,-182" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M-10,-146 L10,-146" stroke="#B23A48" stroke-width="4" stroke-linecap="round"></path>
+                </g>
+                <g transform="translate(340,390)">
+                  <path d="M-60,0 L-54,-120 Q0,-140 54,-120 L60,0 Z" fill="#FF7F11" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-168" r="38" fill="#C98E62" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-39,-174 Q-38,-212 0,-212 Q38,-212 39,-174 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-36,-180 L-76,-174 L-38,-168 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="-12" cy="-162" r="8" fill="#fff" stroke="#141414" stroke-width="3"></circle><circle cx="14" cy="-162" r="8" fill="#fff" stroke="#141414" stroke-width="3"></circle>
+                  <circle cx="-12" cy="-162" r="2.5" fill="#141414"></circle><circle cx="14" cy="-162" r="2.5" fill="#141414"></circle>
+                  <path d="M-12,-138 Q0,-146 12,-138" fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M38,-200 Q46,-186 38,-176 Q30,-186 38,-200 Z" fill="#8EC5FF" stroke="#141414" stroke-width="2"></path>
+                  <path d="M-46,-196 Q-40,-184 -46,-176 Q-52,-184 -46,-196 Z" fill="#8EC5FF" stroke="#141414" stroke-width="2"></path>
+                  <path d="M50,-214 L64,-226 M56,-200 L74,-204" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                </g>
+              </svg>
+              <span class="cm-caption" data-i18n="comic.p5caption">На экзамене.</span>
+              <span class="cm-bubble" style="left:34%;top:40%;width:52%"><span data-i18n="comic.p5bubble">Кто-то собирал деньги «для преподавателя»? Комиссия по этике уже в курсе. Сдаём все — честно.</span><i class="cm-tail cm-tail-left"></i></span>
+              <span class="cm-num">5</span>
+            </button>
+
+            <!-- Кадр 6: итог -->
+            <button class="comic-panel" data-panel="5" style="background:#FFD84D" data-i18n-aria="comic.p6aria" aria-label="Кадр 6">
+              <svg viewBox="0 0 442 370" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><pattern id="ht6" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.8" fill="#F4A259" opacity="0.5"></circle></pattern></defs>
+                <rect width="442" height="370" fill="url(#ht6)"></rect>
+                <g transform="translate(360,390) scale(0.8)">
+                  <path d="M-60,0 L-54,-120 Q0,-140 54,-120 L60,0 Z" fill="#FF7F11" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-168" r="38" fill="#C98E62" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-39,-174 Q-38,-212 0,-212 Q38,-212 39,-174 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-36,-180 L-76,-174 L-38,-168 Z" fill="#D7263D" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-20,-166 L-6,-162 M20,-166 L6,-162" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M-12,-136 Q0,-146 12,-136" fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <text x="0" y="-232" text-anchor="middle" font-family="Russo One, sans-serif" font-size="28" fill="#141414" data-i18n="comic.svgRetake">ПЕРЕСДАЧА</text>
+                </g>
+                <g transform="translate(150,380)">
+                  <path d="M-70,0 L-62,-130 Q0,-152 62,-130 L70,0 Z" fill="#1B998B" stroke="#141414" stroke-width="3"></path>
+                  <circle cx="0" cy="-180" r="38" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                  <path d="M-39,-182 Q-44,-226 -6,-224 L0,-236 L10,-222 Q42,-226 39,-182 Q26,-202 0,-200 Q-22,-204 -39,-182 Z" fill="#2A1E18" stroke="#141414" stroke-width="3"></path>
+                  <path d="M-18,-182 Q-11,-190 -4,-182 M4,-182 Q11,-190 18,-182" fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M-18,-164 Q0,-140 18,-164 Z" fill="#fff" stroke="#141414" stroke-width="3"></path>
+                  <path d="M62,-110 L90,-170 L96,-206" fill="none" stroke="#141414" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M62,-110 L90,-170 L96,-206" fill="none" stroke="#1B998B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <g transform="translate(100,-250) rotate(8)">
+                    <rect x="-40" y="-30" width="80" height="58" fill="#2B59C3" stroke="#141414" stroke-width="3"></rect>
+                    <rect x="-30" y="-20" width="60" height="38" fill="#fff" stroke="#141414" stroke-width="2"></rect>
+                    <text x="0" y="8" text-anchor="middle" font-family="Russo One, sans-serif" font-size="18" fill="#1B998B" data-i18n="comic.svgPassed">СДАЛ</text>
+                  </g>
+                  <circle cx="96" cy="-212" r="11" fill="#E8B48A" stroke="#141414" stroke-width="3"></circle>
+                </g>
+                <path d="M40,40 l5,11 l12,2 l-9,8 l2,12 l-10,-6 l-10,6 l2,-12 l-9,-8 l12,-2 Z M240,60 l5,11 l12,2 l-9,8 l2,12 l-10,-6 l-10,6 l2,-12 l-9,-8 l12,-2 Z" fill="#fff" stroke="#141414" stroke-width="2.5"></path>
+              </svg>
+              <span class="cm-caption cm-caption-full" data-i18n="comic.p6caption">Дамир сдал сам. Ерлан — идёт на пересдачу.</span>
+              <span class="cm-bubble cm-bold" style="left:3%;top:19%;width:44%"><span data-i18n="comic.p6bubble">Знания не купишь. А проблемы — запросто!</span><i class="cm-tail" style="left:58%"></i></span>
+              <span class="cm-num">6</span>
+            </button>
+          </div>
+
+          <footer class="comic-banner">
+            <div>
+              <div class="comic-banner-title" data-i18n="comic.bannerTitle">ВЗЯТКА — НЕ ЛАЙФХАК!</div>
+              <div class="comic-banner-text" data-i18n="comic.bannerText">Купленная оценка — это пустой диплом. Видишь поборы — сообщи.</div>
+            </div>
+            <a class="comic-call" href="tel:1424">
+              <small data-i18n="comic.call">Звони</small>
+              <b>1424</b>
+            </a>
+          </footer>
+        </article>
+
+        <div class="comic-tools reveal">
+          <button class="btn btn-primary" id="comicRead"><i data-lucide="book-open-text"></i><span data-i18n="comic.read">Читать покадрово</span></button>
+          <div class="comic-accents" role="group" data-i18n-aria="comic.accentAria" aria-label="Цвет обложки">
+            <span data-i18n="comic.accent">Цвет обложки:</span>
+            <button class="accent-dot active" data-accent="red" style="background:#D7263D" aria-label="red"></button>
+            <button class="accent-dot" data-accent="blue" style="background:#2B59C3" aria-label="blue"></button>
+            <button class="accent-dot" data-accent="teal" style="background:#1B998B" aria-label="teal"></button>
+            <button class="accent-dot" data-accent="ink" style="background:#141414" aria-label="black"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ВИДЕОРОЛИК ===================== -->
+    <section class="section section-alt" id="video">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="clapperboard"></i><span data-i18n="video.eyebrow">Видеоролик</span></span>
+          <h2 class="section-title" data-i18n="video.title">Социальный ролик против коррупции</h2>
+          <p class="section-text" data-i18n="video.text">Короткий ролик о выборе между лёгкими деньгами и честным будущим. Финальная часть снята у здания нашего колледжа.</p>
+        </div>
+
+        <div class="video-layout">
+          <div class="video-stage reveal">
+            <div class="video-glow" aria-hidden="true"></div>
+            <div class="video-frame" id="videoFrame">
+              <video id="promoVideo" playsinline preload="metadata" poster="video-poster.jpg" data-i18n-aria="video.aria" aria-label="Социальный ролик против коррупции">
+                <source src="anticorruption-video.mp4" type="video/mp4" />
+              </video>
+              <button class="video-play" id="videoPlay" aria-label="Смотреть ролик">
+                <span class="video-play-icon"><i data-lucide="play"></i></span>
+                <span class="video-play-label">Смотреть ролик</span>
+              </button>
+              <div class="video-controls" id="videoControls">
+                <button class="vc-btn" id="vcToggle" aria-label="Пауза"><i data-lucide="pause" class="vc-pause"></i><i data-lucide="play" class="vc-play"></i></button>
+                <div class="vc-track" id="vcTrack" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-i18n-aria="video.seek" aria-label="Перемотка">
+                  <div class="vc-chapters" id="vcChapters"></div>
+                  <div class="vc-fill" id="vcFill"></div>
+                </div>
+                <span class="vc-time" id="vcTime">0:00 / 0:45</span>
+                <button class="vc-btn" id="vcMute" aria-label="Выключить звук"><i data-lucide="volume-2" class="vc-vol-on"></i><i data-lucide="volume-x" class="vc-vol-off"></i></button>
+                <button class="vc-btn" id="vcFull" aria-label="На весь экран"><i data-lucide="maximize"></i></button>
+              </div>
+              <div class="video-error hidden" id="videoError" role="alert">
+                <div class="empty-icon"><i data-lucide="film"></i></div>
+                <strong data-i18n="video.errTitle">Видео не загрузилось</strong>
+                <p data-i18n="video.errText">Проверьте, что файл anticorruption-video.mp4 лежит в одной папке с index.html.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-info reveal">
+            <div class="video-meta">
+              <span class="meta-chip"><i data-lucide="clock-3"></i><span data-i18n="video.len">Длительность 0:45</span></span>
+              <span class="meta-chip"><i data-lucide="smartphone"></i><span data-i18n="video.format">Вертикальный формат 9:16</span></span>
+              <span class="meta-chip"><i data-lucide="map-pin"></i><span data-i18n="video.place">Жезказган</span></span>
+            </div>
+
+            <h3 class="video-chapters-title"><i data-lucide="list-video"></i><span data-i18n="video.chapters">Главы ролика</span></h3>
+            <p class="hint-line hint-left"><i data-lucide="mouse-pointer-click"></i><span data-i18n="video.chapHint">Нажмите на главу, чтобы перейти к этому моменту.</span></p>
+            <ol class="chapter-list" id="chapterList"></ol>
+
+            <div class="video-cta glass">
+              <div class="contact-icon"><i data-lucide="megaphone"></i></div>
+              <div>
+                <strong data-i18n="video.ctaTitle">Задумались?</strong>
+                <p data-i18n="video.ctaText">Если вы столкнулись с коррупцией — сообщите по бесплатному номеру 1424.</p>
+              </div>
+              <a href="tel:1424" class="btn btn-primary btn-sm"><i data-lucide="phone-call"></i>1424</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ЧТО ДЕЛАТЬ, ЕСЛИ ===================== -->
+    <section class="section" id="help">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="life-buoy"></i><span data-i18n="help.eyebrow">Пошаговая помощь</span></span>
+          <h2 class="section-title" data-i18n="help.title">Что делать, если…</h2>
+          <p class="section-text" data-i18n="help.text">Выберите ситуацию — и получите понятный алгоритм действий с проверенными официальными контактами.</p>
+        </div>
+
+        <div class="situation-tabs reveal" id="situationTabs"></div>
+        <div class="steps-wrap glass reveal" id="stepsWrap"></div>
+
+        <div class="contacts-grid reveal">
+          <div class="contact-card glass">
+            <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+            <div class="contact-num">1424</div>
+            <p data-i18n="help.c1424">Call-центр Службы по противодействию коррупции КНБ РК. Звонок бесплатный.</p>
+            <a href="tel:1424" class="link-arrow"><span data-i18n="help.call">Позвонить</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="contact-card glass">
+            <div class="contact-icon"><i data-lucide="landmark"></i></div>
+            <div class="contact-num">115</div>
+            <p data-i18n="help.c115">Call-центр Генеральной прокуратуры РК — нарушения прав граждан. Звонок бесплатный.</p>
+            <a href="tel:115" class="link-arrow"><span data-i18n="help.call">Позвонить</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="contact-card glass">
+            <div class="contact-icon"><i data-lucide="headphones"></i></div>
+            <div class="contact-num">1414</div>
+            <p data-i18n="help.c1414">Единый контакт-центр: консультации по госуслугам, eGov, eOtinish, ОСМС и бесплатной медпомощи.</p>
+            <a href="tel:1414" class="link-arrow"><span data-i18n="help.call">Позвонить</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="contact-card glass">
+            <div class="contact-icon"><i data-lucide="siren"></i></div>
+            <div class="contact-num">102 / 112</div>
+            <p data-i18n="help.c112">Полиция и единая служба экстренной помощи — если есть угроза жизни или здоровью.</p>
+            <a href="tel:112" class="link-arrow"><span data-i18n="help.call">Позвонить</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="links-row reveal">
+          <a class="official-link glass" href="https://eotinish.kz" target="_blank" rel="noopener"><i data-lucide="send"></i><span><b>eOtinish.kz</b><small data-i18n="help.lEotinish">Обращения в госорганы онлайн</small></span></a>
+          <a class="official-link glass" href="https://egov.kz/cms/ru/information/state_agencies/telefoni_doveriya" target="_blank" rel="noopener"><i data-lucide="book-user"></i><span><b>egov.kz</b><small data-i18n="help.lEgov">Телефоны доверия госорганов</small></span></a>
+          <a class="official-link glass" href="https://fms.kz" target="_blank" rel="noopener"><i data-lucide="stethoscope"></i><span><b>fms.kz</b><small data-i18n="help.lFms">ФСМС — жалобы на медпомощь</small></span></a>
+          <a class="official-link glass" href="https://adilet.zan.kz" target="_blank" rel="noopener"><i data-lucide="scroll-text"></i><span><b>adilet.zan.kz</b><small data-i18n="help.lAdilet">Законы Республики Казахстан</small></span></a>
+        </div>
+        <p class="source-note center" data-i18n="help.verified">Контакты проверены по официальным публикациям (egov.kz, gov.kz) на ноябрь 2026 г. Перед обращением уточняйте актуальность на официальных сайтах.</p>
+      </div>
+    </section>
+
+    <!-- ===================== СООБЩЕНИЕ С ФОТО ===================== -->
+    <section class="section section-alt" id="report">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="send"></i><span data-i18n="ot.eyebrow">Действовать</span></span>
+          <h2 class="section-title" data-i18n="ot.title">Сообщение с фото</h2>
+          <p class="section-text" data-i18n="ot.text">Сообщите о коррупции с фото в официальный канал — без имени, а с фото сайт удалит геометки и данные телефона. Официальное обращение (өтініш) составляется в разделе «Шаблоны документов».</p>
+        </div>
+
+        <!-- Сообщение с фото -->
+        <div class="report-layout reveal">
+            <form class="report-card glass" id="reportForm" novalidate>
+              <div class="report-head">
+                <h3><i data-lucide="camera"></i><span data-i18n="rep.title">Сообщение с фото</span></h3>
+                <span class="tag tag-real" data-i18n="rep.badge">Без имени</span>
+              </div>
+              <div class="alert alert-info">
+                <i data-lucide="shield-check"></i>
+                <p data-i18n="rep.privacy">Сайт не спрашивает имя и не хранит сообщение на сервере. С фото удаляются геометки, модель телефона и дата съёмки. Отправляете вы сами — в официальный канал.</p>
+              </div>
+              <div class="form-row">
+                <label class="field"><span data-i18n="rep.where">Где это произошло</span><input type="text" id="repWhere" maxlength="120" data-i18n-placeholder="rep.phWhere" placeholder="Например, колледж, кабинет 204" /></label>
+                <label class="field"><span data-i18n="rep.when">Когда</span><input type="date" id="repWhen" /></label>
+              </div>
+              <label class="field"><span data-i18n="rep.what">Что произошло</span>
+                <textarea id="repWhat" rows="5" maxlength="1500" data-i18n-placeholder="rep.phWhat" placeholder="Кто, что требовал, какую сумму, были ли свидетели"></textarea>
+                <small class="char-count"><span id="repCount">0</span>/1500</small>
+              </label>
+              <div class="field">
+                <span data-i18n="rep.photos">Фото (до 5)</span>
+                <label class="dropzone" id="dropzone">
+                  <input type="file" id="repPhotos" accept="image/*" multiple class="visually-hidden" />
+                  <span class="dz-icon"><i data-lucide="image-plus"></i></span>
+                  <strong data-i18n="rep.add">Добавить фото</strong>
+                  <small data-i18n="rep.addHint">Нажмите или перетащите сюда · JPG, PNG, HEIC</small>
+                </label>
+                <div class="photo-grid" id="photoGrid"></div>
+              </div>
+            </form>
+
+            <aside class="send-card glass">
+              <h3><i data-lucide="send"></i><span data-i18n="rep.sendTitle">Как отправить</span></h3>
+              <ol class="send-steps">
+                <li data-i18n="rep.step1">Скопируйте текст сообщения.</li>
+                <li data-i18n="rep.step2">Сохраните фото без метаданных.</li>
+                <li data-i18n="rep.step3">Откройте официальный канал и отправьте текст и фото.</li>
+              </ol>
+              <div class="send-actions">
+                <button class="btn btn-primary btn-block" type="button" id="repCopy"><i data-lucide="copy"></i><span data-i18n="rep.copyBtn">Скопировать текст</span></button>
+                <button class="btn btn-ghost btn-block" type="button" id="repSave"><i data-lucide="download"></i><span data-i18n="rep.saveBtn">Сохранить фото без метаданных</span></button>
+              </div>
+              <div class="channel-list">
+                <a class="channel" id="chWhatsapp" href="https://wa.me/77770001424" target="_blank" rel="noopener">
+                  <span class="ch-icon"><i data-lucide="message-circle"></i></span>
+                  <span><b data-i18n="rep.chWa">WhatsApp-бот</b><small>8 777 000 1424</small></span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a class="channel" href="https://t.me/antikorkz_bot" target="_blank" rel="noopener">
+                  <span class="ch-icon"><i data-lucide="send"></i></span>
+                  <span><b data-i18n="rep.chTg">Telegram-бот</b><small>@antikorkz_bot</small></span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a class="channel" href="tel:1424">
+                  <span class="ch-icon"><i data-lucide="phone-call"></i></span>
+                  <span><b data-i18n="rep.chCall">Call-центр, бесплатно</b><small>1424</small></span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+              <p class="source-note" data-i18n="rep.botNote">Боты запускала Антикоррупционная служба (WhatsApp — в феврале 2025 г.). После её присоединения к КНБ в июле 2025 г. уточняйте, что боты работают, по номеру 1424.</p>
+              <div class="warn-line"><i data-lucide="info"></i><span data-i18n="rep.anonNote">Полной анонимности в мессенджерах нет: бот видит ваш аккаунт. Закон гарантирует конфиденциальность и защиту тем, кто сообщает о коррупции.</span></div>
+            </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ШАБЛОНЫ ===================== -->
+    <section class="section" id="templates">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="file-text"></i><span data-i18n="tpl.eyebrow">Документы</span></span>
+          <h2 class="section-title" data-i18n="tpl.title">Шаблоны документов</h2>
+          <p class="section-text" data-i18n="tpl.text">Заполните свои данные — шаблон обновится автоматически. Затем просмотрите, скопируйте или скачайте документ.</p>
+        </div>
+
+        <div class="tpl-layout">
+          <div class="tpl-list reveal" id="tplList"></div>
+
+          <div class="tpl-main reveal">
+          <div class="tpl-editor glass" id="tplEditor">
+            <div class="tpl-fields">
+              <label class="field"><span data-i18n="tpl.fName">ФИО заявителя</span><input type="text" id="tplName" data-i18n-placeholder="tpl.phName" placeholder="Иванов Иван Иванович" /></label>
+              <label class="field"><span data-i18n="tpl.fContact">Адрес / контакты</span><input type="text" id="tplContact" data-i18n-placeholder="tpl.phContact" placeholder="г. Астана, ул. …, тел. …" /></label>
+              <label class="field"><span data-i18n="tpl.fTo">Кому (орган / должность)</span><input type="text" id="tplTo" data-i18n-placeholder="tpl.phTo" placeholder="Руководителю …" /></label>
+              <label class="field"><span data-i18n="tpl.fDetails">Суть ситуации (кратко)</span><textarea id="tplDetails" rows="3" data-i18n-placeholder="tpl.phDetails" placeholder="Опишите факты: дата, место, кто, что произошло"></textarea></label>
+            </div>
+            <div class="tpl-preview-head">
+              <h3 id="tplTitle"></h3>
+              <div class="tpl-actions">
+                <button class="btn btn-sm btn-ghost" id="tplView"><i data-lucide="eye"></i><span data-i18n="tpl.view">Просмотр</span></button>
+                <button class="btn btn-sm btn-ghost" id="tplCopy"><i data-lucide="copy"></i><span data-i18n="tpl.copy">Копировать</span></button>
+                <button class="btn btn-sm btn-ghost" id="tplTxt"><i data-lucide="file-down"></i>.TXT</button>
+                <button class="btn btn-sm btn-primary" id="tplDoc"><i data-lucide="download"></i>.DOC (Word)</button>
+              </div>
+            </div>
+            <pre class="tpl-preview" id="tplPreview"></pre>
+            <p class="disclaimer"><i data-lucide="info"></i><span data-i18n="tpl.disclaimer">Шаблоны носят ознакомительный характер. Для официальной подачи используйте eOtinish.kz или обратитесь в соответствующий орган.</span></p>
+          </div>
+
+          <!-- Шаблон «Обращение» = пошаговый мастер өтініш -->
+          <div class="tpl-wizard" id="tplWizard" hidden>
+            <div class="tpl-wiz-head glass">
+              <span class="tpl-ic"><i data-lucide="file-pen-line"></i></span>
+              <div>
+                <h3 data-i18n="tpl.wizTitle">Обращение (өтініш) — пошагово</h3>
+                <p data-i18n="tpl.wizText">Ответьте на 5 шагов — сайт составит официальное обращение на русском или казахском. Его можно скопировать, скачать и подать на eOtinish.kz.</p>
+              </div>
+            </div>
+            <div class="wizard-layout">
+              <div class="wizard glass">
+                <ol class="wiz-steps" id="wizSteps"></ol>
+                <div class="wiz-body" id="wizBody" aria-live="polite"></div>
+                <div class="wiz-nav">
+                  <button class="btn btn-ghost" id="wizBack" type="button"><i data-lucide="arrow-left"></i><span data-i18n="wiz.back">Назад</span></button>
+                  <button class="btn btn-primary" id="wizNext" type="button"><span data-i18n="wiz.next">Далее</span><i data-lucide="arrow-right"></i></button>
+                </div>
+              </div>
+
+              <aside class="my-appeals glass">
+                <div class="ma-head">
+                  <h3><i data-lucide="folder-clock"></i><span data-i18n="wiz.myTitle">Мои обращения</span></h3>
+                  <span class="tag tag-demo" data-i18n="wiz.myTag">На этом устройстве</span>
+                </div>
+                <div id="myAppeals"></div>
+                <p class="source-note" data-i18n="wiz.approx">Срок ответа рассчитан по рабочим дням без учёта праздников.</p>
+              </aside>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== АНАЛИТИКА ===================== -->
+    <section class="section section-alt" id="analytics">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="chart-column"></i><span data-i18n="an.eyebrow">Открытость</span></span>
+          <h2 class="section-title" data-i18n="an.title">Прозрачность и аналитика</h2>
+          <p class="section-text" data-i18n="an.text">Карта регионов, примеры инструментов прозрачности и статистика — с честной пометкой, где реальные данные, а где демонстрационные.</p>
+        </div>
+
+        <div class="map-layout">
+          <div class="map-card glass reveal">
+            <div class="map-head">
+              <h3><i data-lucide="map"></i><span data-i18n="an.mapTitle">Схематичная карта Казахстана</span></h3>
+              <span class="tag tag-demo" data-i18n="an.mapTag">Показатели — демо</span>
+            </div>
+            <div class="map-wrap">
+              <svg id="kzMap" class="kz-map" viewBox="0 0 900 520" role="img" data-i18n-aria="an.mapAria" aria-label="Схематичная карта регионов Казахстана"></svg>
+            </div>
+            <div class="map-legend">
+              <span><i class="dot dot-oblast"></i><span data-i18n="an.legendOblast">Область</span></span>
+              <span><i class="dot dot-city"></i><span data-i18n="an.legendCity">Город республиканского значения</span></span>
+              <span><i class="dot dot-college"></i><span data-i18n="an.legendCollege">Наш колледж (Жезказган)</span></span>
+            </div>
+          </div>
+
+          <aside class="region-card glass reveal" id="regionCard">
+            <div class="region-empty">
+              <div class="empty-icon"><i data-lucide="map-pin"></i></div>
+              <h3 data-i18n="an.regionEmpty">Выберите регион</h3>
+              <p data-i18n="an.regionEmptyText">Нажмите на точку на карте или выберите из списка.</p>
+            </div>
+            <label class="field"><span data-i18n="an.region">Регион</span>
+              <select id="regionSelect"></select>
+            </label>
+            <div id="regionInfo" class="region-info hidden"></div>
+          </aside>
+        </div>
+
+        <h3 class="sub-title reveal"><i data-lucide="brick-wall"></i><span data-i18n="an.wall">Стена честности</span></h3>
+        <div class="wall-filter reveal" id="wallFilter">
+          <button class="chip active" data-filter="all" data-i18n="an.fAll">Все</button>
+          <button class="chip" data-filter="procurement" data-i18n="an.fProc">Закупки</button>
+          <button class="chip" data-filter="savings" data-i18n="an.fSave">Экономия</button>
+          <button class="chip" data-filter="control" data-i18n="an.fControl">Общественный контроль</button>
+          <button class="chip" data-filter="initiative" data-i18n="an.fInit">Инициативы</button>
+        </div>
+        <div class="wall-grid" id="wallGrid"></div>
+
+        <h3 class="sub-title reveal"><i data-lucide="chart-line"></i><span data-i18n="an.stats">Статистика</span></h3>
+        <div class="charts-grid">
+          <div class="chart-card glass reveal chart-wide">
+            <div class="chart-head">
+              <div>
+                <h4 data-i18n="an.cpiTitle">Казахстан в Индексе восприятия коррупции</h4>
+                <p data-i18n="an.cpiSub">Баллы из 100 (чем выше, тем ниже воспринимаемый уровень коррупции)</p>
+              </div>
+              <span class="tag tag-real" data-i18n="an.real">Реальные данные</span>
+            </div>
+            <div class="chart-box"><canvas id="cpiChart" role="img" data-i18n-aria="an.cpiTitle" aria-label="Казахстан в Индексе восприятия коррупции"></canvas></div>
+            <p class="source-note" data-i18n="an.cpiSource">Источник: Transparency International, ежегодные выпуски Corruption Perceptions Index (2017–2025). Цель Концепции антикоррупционной политики РК на 2022–2026 гг. — 47 баллов.</p>
+          </div>
+
+          <div class="chart-card glass reveal">
+            <div class="chart-head">
+              <div>
+                <h4 data-i18n="an.cmpTitle">ИВК-2025: сравнение</h4>
+                <p data-i18n="an.points">Баллы из 100</p>
+              </div>
+              <span class="tag tag-real" data-i18n="an.real">Реальные данные</span>
+            </div>
+            <div class="chart-box"><canvas id="compareChart" role="img" data-i18n-aria="an.cmpTitle" aria-label="ИВК-2025: сравнение"></canvas></div>
+            <p class="source-note" data-i18n="an.cmpSource">Источник: Transparency International, CPI 2025.</p>
+          </div>
+
+          <div class="chart-card glass reveal">
+            <div class="chart-head">
+              <div>
+                <h4 data-i18n="an.topicsTitle">Тематика обращений</h4>
+                <p data-i18n="an.topicsSub">Пример структуры обращений на платформе</p>
+              </div>
+              <span class="tag tag-demo" data-i18n="an.demo">Демо-данные</span>
+            </div>
+            <div class="chart-box"><canvas id="topicsChart" role="img" data-i18n-aria="an.topicsTitle" aria-label="Тематика обращений"></canvas></div>
+            <p class="source-note" data-i18n="an.topicsNote">Условные данные для демонстрации работы диаграммы. Не являются официальной статистикой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== СООБЩЕСТВО ===================== -->
+    <section class="section" id="community">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i data-lucide="users"></i><span data-i18n="cm.eyebrow">Вместе</span></span>
+          <h2 class="section-title" data-i18n="cm.title">Сообщество и обратная связь</h2>
+          <p class="section-text" data-i18n="cm.text">Поделитесь идеей, задайте вопрос или присоединяйтесь к волонтёрам.</p>
+        </div>
+
+        <div class="community-grid">
+          <form class="form-card glass reveal" id="feedbackForm" novalidate>
+            <h3><i data-lucide="message-square-text"></i><span data-i18n="cm.formTitle">Форма обратной связи</span></h3>
+            <div class="alert alert-warn">
+              <i data-lucide="triangle-alert"></i>
+              <p data-i18n-html="cm.demoWarn"><b>Демонстрационная форма.</b> Сообщения никуда не отправляются и не являются официальной жалобой. Чтобы сообщить о коррупции, звоните <a href="tel:1424">1424</a> или используйте <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a>.</p>
+            </div>
+            <label class="field"><span data-i18n-html="cm.fName">Имя <small>(необязательно)</small></span><input type="text" name="name" maxlength="60" data-i18n-placeholder="cm.phName" placeholder="Как к вам обращаться" /></label>
+            <label class="field"><span data-i18n="cm.fCategory">Категория обращения</span>
+              <select name="category" required>
+                <option value="" data-i18n="cm.cat0">— выберите категорию —</option>
+                <option value="question" data-i18n="cm.cat1">Вопрос о проекте</option>
+                <option value="idea" data-i18n="cm.cat2">Идея или предложение</option>
+                <option value="bug" data-i18n="cm.cat3">Ошибка на сайте</option>
+                <option value="education" data-i18n="cm.cat4">Образование и тесты</option>
+                <option value="other" data-i18n="cm.cat5">Другое</option>
+              </select>
+            </label>
+            <label class="field"><span data-i18n="cm.fMessage">Текст сообщения</span>
+              <textarea name="message" rows="5" maxlength="1000" data-i18n-placeholder="cm.phMessage" placeholder="Напишите сообщение (минимум 10 символов)" required></textarea>
+              <small class="char-count"><span id="msgCount">0</span>/1000</small>
+            </label>
+            <button type="submit" class="btn btn-primary btn-block"><i data-lucide="send"></i><span data-i18n="cm.send">Отправить</span></button>
+          </form>
+
+          <div class="faq-card reveal">
+            <h3><i data-lucide="circle-help"></i><span data-i18n="cm.faq">Частые вопросы</span></h3>
+            <div class="faq" id="faqList"></div>
+          </div>
+        </div>
+
+        <div class="volunteer glass reveal">
+          <div class="volunteer-info">
+            <span class="eyebrow"><i data-lucide="hand-heart"></i><span data-i18n="vol.eyebrow">Волонтёрство</span></span>
+            <h3 data-i18n="vol.title">Стань частью перемен</h3>
+            <p data-i18n="vol.text">Помогайте проводить уроки честности в колледже и школах города, участвуйте в общественном мониторинге и создавайте полезный контент.</p>
+            <ul class="check-list">
+              <li><i data-lucide="check"></i><span data-i18n="vol.li1">Просветительские уроки и квизы</span></li>
+              <li><i data-lucide="check"></i><span data-i18n="vol.li2">Мониторинг доступности госуслуг</span></li>
+              <li><i data-lucide="check"></i><span data-i18n="vol.li3">Дизайн, видео и социальные сети</span></li>
+            </ul>
+            <div class="volunteer-count"><span id="volCount">0</span> <span class="vc-label" data-i18n="vol.count">заявок сохранено на этом устройстве</span></div>
+          </div>
+          <form class="volunteer-form" id="volunteerForm" novalidate>
+            <div class="form-row">
+              <label class="field"><span data-i18n="vol.fName">Имя</span><input type="text" name="vname" required maxlength="60" data-i18n-placeholder="vol.phName" placeholder="Ваше имя" /></label>
+              <label class="field"><span>Email</span><input type="email" name="vemail" required placeholder="name@example.com" /></label>
+            </div>
+            <div class="form-row">
+              <label class="field"><span data-i18n="vol.fCity">Город</span><input type="text" name="vcity" maxlength="40" data-i18n-placeholder="vol.phCity" placeholder="Например, Жезказган" /></label>
+              <label class="field"><span data-i18n="vol.fAge">Возраст</span><input type="number" name="vage" min="14" max="99" placeholder="18" /></label>
+            </div>
+            <fieldset class="field">
+              <span data-i18n="vol.fDirs">Направления (можно несколько)</span>
+              <div class="check-chips">
+                <label><input type="checkbox" name="vdir" value="edu" /><span data-i18n="vol.d1">Просвещение</span></label>
+                <label><input type="checkbox" name="vdir" value="monitor" /><span data-i18n="vol.d2">Мониторинг</span></label>
+                <label><input type="checkbox" name="vdir" value="media" /><span data-i18n="vol.d3">Медиа</span></label>
+                <label><input type="checkbox" name="vdir" value="it" /><span>IT</span></label>
+                <label><input type="checkbox" name="vdir" value="events" /><span data-i18n="vol.d5">Мероприятия</span></label>
+              </div>
+            </fieldset>
+            <label class="consent"><input type="checkbox" name="vconsent" required /><span data-i18n="vol.consent">Я понимаю, что это учебная демо-форма: данные сохраняются только в моём браузере и никуда не передаются.</span></label>
+            <button type="submit" class="btn btn-primary btn-block"><i data-lucide="user-plus"></i><span data-i18n="vol.join">Присоединиться</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark"><i data-lucide="shield-check"></i></span>
+            <span class="logo-text"><strong data-i18n="brand.name">Чистое будущее</strong><small data-i18n="brand.tag2">начинается с нас</small></span>
+          </a>
+          <p data-i18n="footer.about">Образовательный проект о противодействии коррупции, правах граждан и прозрачности. Не является государственным ресурсом.</p>
+          <div class="footer-college"><i data-lucide="graduation-cap"></i><span data-i18n="footer.college">Жезқазған индустриалдық-гуманитарлық колледжі · группа П-11</span></div>
+        </div>
+        <div>
+          <h4 data-i18n="footer.nav">Навигация</h4>
+          <ul>
+            <li><a href="#essays" data-i18n="nav.essays">Эссе студентов</a></li>
+            <li><a href="#calculator" data-i18n="nav.calc">Калькулятор</a></li>
+            <li><a href="#school" data-i18n="nav.schoolFull">Колледж антикоррупции</a></li>
+            <li><a href="#comic" data-i18n="nav.comic">Комикс</a></li>
+            <li><a href="#video" data-i18n="nav.videoFull">Видеоролик</a></li>
+            <li><a href="#help" data-i18n="nav.helpFull">Что делать, если…</a></li>
+            <li><a href="#report" data-i18n="ot.tabReport">Сообщение с фото</a></li>
+            <li><a href="#templates" data-i18n="nav.templates">Шаблоны</a></li>
+            <li><a href="#analytics" data-i18n="nav.analytics">Аналитика</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contacts">Официальные контакты</h4>
+          <ul>
+            <li><a href="tel:1424"><i data-lucide="phone"></i><span data-i18n="footer.f1424">1424 — по фактам коррупции</span></a></li>
+            <li><a href="tel:115"><i data-lucide="phone"></i><span data-i18n="footer.f115">115 — Генпрокуратура</span></a></li>
+            <li><a href="tel:1414"><i data-lucide="phone"></i><span data-i18n="footer.f1414">1414 — Единый контакт-центр</span></a></li>
+            <li><a href="https://eotinish.kz" target="_blank" rel="noopener"><i data-lucide="globe"></i>eotinish.kz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.resources">Полезные ресурсы</h4>
+          <ul>
+            <li><a href="https://egov.kz" target="_blank" rel="noopener"><i data-lucide="external-link"></i>egov.kz</a></li>
+            <li><a href="https://adilet.zan.kz" target="_blank" rel="noopener"><i data-lucide="external-link"></i>adilet.zan.kz</a></li>
+            <li><a href="https://goszakup.gov.kz" target="_blank" rel="noopener"><i data-lucide="external-link"></i>goszakup.gov.kz</a></li>
+            <li><a href="https://www.transparency.org/en/cpi" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Transparency International</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> <span data-i18n="footer.copy">«Чистое будущее начинается с нас». Учебный IT-проект группы П-11, Жезказганский индустриально-гуманитарный колледж.</span></p>
+        <p data-i18n="footer.tech">Сделано на HTML5, CSS3, JavaScript, Chart.js и Lucide Icons.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ИИ-помощник -->
+  <button class="ai-fab" id="aiFab" type="button" aria-expanded="false" aria-controls="aiPanel" data-i18n-aria="ai.title" aria-label="ИИ-помощник">
+    <i data-lucide="sparkles"></i><span data-i18n="ai.fab">ИИ-помощник</span>
+  </button>
+  <section class="ai-panel" id="aiPanel" aria-labelledby="aiTitle" aria-hidden="true">
+    <header class="ai-head">
+      <div class="ai-avatar"><i data-lucide="bot"></i></div>
+      <div class="ai-head-text">
+        <strong id="aiTitle" data-i18n="ai.title">ИИ-помощник</strong>
+        <small id="aiStatus"><i class="ai-dot"></i><span></span></small>
+      </div>
+      <button class="icon-btn ai-icon" id="aiClear" type="button" data-i18n-aria="ai.clear" data-i18n-title="ai.clear" aria-label="Очистить чат" title="Очистить чат"><i data-lucide="rotate-ccw"></i></button>
+      <button class="icon-btn ai-icon" id="aiClose" type="button" data-i18n-aria="common.close" aria-label="Закрыть"><i data-lucide="x"></i></button>
+    </header>
+    <div class="ai-log" id="aiLog" aria-live="polite"></div>
+    <div class="ai-chips" id="aiChips"></div>
+    <form class="ai-form" id="aiForm">
+      <textarea id="aiInput" rows="1" maxlength="800" data-i18n-placeholder="ai.placeholder" placeholder="Задайте вопрос…" data-i18n-aria="ai.inputAria" aria-label="Вопрос о коррупции, правах или сайте"></textarea>
+      <button type="submit" class="ai-send" id="aiSend" data-i18n-aria="ai.send" aria-label="Отправить"><i data-lucide="arrow-up"></i></button>
+      <button type="button" class="ai-send ai-stop hidden" id="aiStop" data-i18n-aria="ai.stop" aria-label="Остановить"><i data-lucide="square"></i></button>
+    </form>
+    <p class="ai-note" data-i18n="ai.note">ИИ может ошибаться. Это не юридическая консультация — важное уточняйте по 1424 или на eOtinish.</p>
+  </section>
+
+  <button class="to-top" id="toTop" data-i18n-aria="common.toTop" aria-label="Наверх"><i data-lucide="arrow-up"></i></button>
+
+
+  <!-- ===================== СПЕЦИАЛЬНЫЕ ВОЗМОЖНОСТИ ===================== -->
+  <div class="a11y-overlay" id="a11yOverlay" hidden></div>
+  <aside class="a11y-panel" id="a11yPanel" role="dialog" aria-modal="true" aria-labelledby="a11yTitle" hidden>
+    <div class="a11y-head">
+      <span class="a11y-head-ic"><i data-lucide="accessibility"></i></span>
+      <div>
+        <h2 id="a11yTitle" data-i18n="a11y.title">Специальные возможности</h2>
+        <p data-i18n="a11y.intro">Настройте сайт под себя. Всё сохраняется на этом устройстве.</p>
+      </div>
+      <button type="button" class="icon-btn" id="a11yClose" data-i18n-aria="a11y.close" aria-label="Закрыть"><i data-lucide="x"></i></button>
+    </div>
+
+    <div class="a11y-body">
+      <section class="a11y-sec">
+        <h3 data-i18n="a11y.sProfiles">Готовые профили</h3>
+        <div class="a11y-profiles">
+          <button type="button" class="a11y-profile" data-profile="vision" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="eye"></i></span>
+            <b data-i18n="a11y.p.vision">Слабовидящим</b>
+            <small data-i18n="a11y.pd.vision">Крупный текст, контраст, чёткий шрифт</small>
+          </button>
+          <button type="button" class="a11y-profile" data-profile="blind" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="volume-2"></i></span>
+            <b data-i18n="a11y.p.blind">Чтение вслух</b>
+            <small data-i18n="a11y.pd.blind">Сайт читает текст по нажатию</small>
+          </button>
+          <button type="button" class="a11y-profile" data-profile="dyslexia" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="book-open-text"></i></span>
+            <b data-i18n="a11y.p.dyslexia">Дислексия</b>
+            <small data-i18n="a11y.pd.dyslexia">Лёгкий шрифт, интервалы, маска</small>
+          </button>
+          <button type="button" class="a11y-profile" data-profile="epilepsy" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="zap-off"></i></span>
+            <b data-i18n="a11y.p.epilepsy">Без мигания</b>
+            <small data-i18n="a11y.pd.epilepsy">Анимации и эффекты выключены</small>
+          </button>
+          <button type="button" class="a11y-profile" data-profile="focus" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="focus"></i></span>
+            <b data-i18n="a11y.p.focus">Концентрация</b>
+            <small data-i18n="a11y.pd.focus">Ничего лишнего, без картинок</small>
+          </button>
+          <button type="button" class="a11y-profile" data-profile="motor" aria-pressed="false">
+            <span class="a11y-pr-ic"><i data-lucide="hand"></i></span>
+            <b data-i18n="a11y.p.motor">Моторика</b>
+            <small data-i18n="a11y.pd.motor">Крупные кнопки и курсор</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="a11y-sec">
+        <h3 data-i18n="a11y.sText">Текст</h3>
+        <div class="a11y-group" role="group" aria-labelledby="a11yL-text">
+          <span class="a11y-label" id="a11yL-text" data-i18n="a11y.lSize">Размер текста</span>
+          <div class="a11y-seg a11y-seg-text"><button type="button" class="a11y-opt" data-set="text" data-value="100" aria-pressed="false">A</button><button type="button" class="a11y-opt" data-set="text" data-value="115" aria-pressed="false">A+</button><button type="button" class="a11y-opt" data-set="text" data-value="130" aria-pressed="false">A++</button><button type="button" class="a11y-opt" data-set="text" data-value="150" aria-pressed="false">A+++</button></div>
+        </div>
+        <div class="a11y-group" role="group" aria-labelledby="a11yL-font">
+          <span class="a11y-label" id="a11yL-font" data-i18n="a11y.lFont">Шрифт</span>
+          <div class="a11y-seg a11y-seg-font"><button type="button" class="a11y-opt" data-set="font" data-value="default" aria-pressed="false"><span data-i18n="a11y.fDefault">Обычный</span></button><button type="button" class="a11y-opt font-readable" data-set="font" data-value="readable" aria-pressed="false"><span data-i18n="a11y.fReadable">Чёткий</span></button><button type="button" class="a11y-opt font-easy" data-set="font" data-value="easy" aria-pressed="false"><span data-i18n="a11y.fEasy">Лёгкий</span></button></div>
+        </div>
+        <div class="a11y-group" role="group" aria-labelledby="a11yL-spacing">
+          <span class="a11y-label" id="a11yL-spacing" data-i18n="a11y.lSpacing">Интервалы</span>
+          <div class="a11y-seg a11y-seg-spacing"><button type="button" class="a11y-opt" data-set="spacing" data-value="0" aria-pressed="false"><span data-i18n="a11y.sp0">Обычные</span></button><button type="button" class="a11y-opt" data-set="spacing" data-value="1" aria-pressed="false"><span data-i18n="a11y.sp1">Шире</span></button><button type="button" class="a11y-opt" data-set="spacing" data-value="2" aria-pressed="false"><span data-i18n="a11y.sp2">Широкие</span></button></div>
+        </div>
+      </section>
+
+      <section class="a11y-sec">
+        <h3 data-i18n="a11y.sColor">Цвет и контраст</h3>
+        <div class="a11y-group" role="group" aria-labelledby="a11yL-contrast">
+          <span class="a11y-label" id="a11yL-contrast" data-i18n="a11y.lContrast">Цветовая схема</span>
+          <div class="a11y-seg a11y-seg-contrast"><button type="button" class="a11y-opt" data-set="contrast" data-value="default" aria-pressed="false"><i class="sw sw-default"></i><span data-i18n="a11y.cDefault">Обычная</span></button><button type="button" class="a11y-opt" data-set="contrast" data-value="high" aria-pressed="false"><i class="sw sw-high"></i><span data-i18n="a11y.cHigh">Контрастная</span></button><button type="button" class="a11y-opt" data-set="contrast" data-value="wb" aria-pressed="false"><i class="sw sw-wb">Аа</i><span data-i18n="a11y.cWb">Чёрным по белому</span></button><button type="button" class="a11y-opt" data-set="contrast" data-value="bw" aria-pressed="false"><i class="sw sw-bw">Аа</i><span data-i18n="a11y.cBw">Белым по чёрному</span></button><button type="button" class="a11y-opt" data-set="contrast" data-value="yb" aria-pressed="false"><i class="sw sw-yb">Аа</i><span data-i18n="a11y.cYb">Жёлтым по чёрному</span></button></div>
+        </div>
+        <div class="a11y-switches">
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="gray">
+            <span class="a11y-sw-ic"><i data-lucide="palette"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.gray">Чёрно-белые цвета</b><small data-i18n="a11y.d.gray">Убирает цвет со всей страницы</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="a11y-sec">
+        <h3 data-i18n="a11y.sView">Восприятие и управление</h3>
+        <div class="a11y-switches">
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="speak">
+            <span class="a11y-sw-ic"><i data-lucide="volume-2"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.speak">Чтение вслух</b><small data-i18n="a11y.d.speak">Нажмите на любой текст — он прозвучит</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="motion">
+            <span class="a11y-sw-ic"><i data-lucide="circle-pause"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.motion">Остановить анимации</b><small data-i18n="a11y.d.motion">Без движения, мигания и плавной прокрутки</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="simple">
+            <span class="a11y-sw-ic"><i data-lucide="layout-template"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.simple">Упрощённый вид</b><small data-i18n="a11y.d.simple">Без декоративного фона и эффектов стекла</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="noimg">
+            <span class="a11y-sw-ic"><i data-lucide="image-off"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.noimg">Скрыть изображения</b><small data-i18n="a11y.d.noimg">Остаётся только текст</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="links">
+            <span class="a11y-sw-ic"><i data-lucide="link"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.links">Выделить ссылки и кнопки</b><small data-i18n="a11y.d.links">Подчёркивание и заметная рамка фокуса</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="targets">
+            <span class="a11y-sw-ic"><i data-lucide="mouse-pointer-click"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.targets">Крупные кнопки</b><small data-i18n="a11y.d.targets">Легче попасть пальцем или мышью</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="cursor">
+            <span class="a11y-sw-ic"><i data-lucide="mouse-pointer-2"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.cursor">Крупный курсор</b><small data-i18n="a11y.d.cursor">Большая заметная стрелка</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-toggle="guide">
+            <span class="a11y-sw-ic"><i data-lucide="scan-line"></i></span>
+            <span class="a11y-sw-text"><b data-i18n="a11y.t.guide">Маска для чтения</b><small data-i18n="a11y.d.guide">Затемняет всё, кроме строки под курсором</small></span>
+            <span class="a11y-knob" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <button type="button" class="btn btn-ghost btn-block" id="a11yReset"><i data-lucide="rotate-ccw"></i><span data-i18n="a11y.reset">Сбросить все настройки</span></button>
+      <p class="a11y-note" data-i18n="a11y.note">Сайтом можно пользоваться с клавиатуры (Tab, Enter, Esc) и с экранными дикторами — NVDA, VoiceOver, TalkBack.</p>
+    </div>
+  </aside>
+
+  <div class="a11y-mask" id="a11yMask" aria-hidden="true"><div class="a11y-mask-top"></div><div class="a11y-mask-bottom"></div></div>
+  <button type="button" class="a11y-stop" id="a11yStop" hidden><i data-lucide="square"></i><span data-i18n="a11y.stop">Остановить чтение</span></button>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog glass">
+      <button class="icon-btn modal-close" data-close data-i18n-aria="common.close" aria-label="Закрыть"><i data-lucide="x"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="script.js?v=14"></script>
+</body>
+</html>
