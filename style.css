@@ -1171,15 +1171,19 @@ html[lang="kk"] .comic-panel svg text { font-family: 'Rubik', sans-serif; font-w
 }
 
 /* ---------- 14. Адаптив ---------- */
-@media (max-width: 1440px) {
+@media (max-width: 4000px) {
   .header .logo-text small { display: none; }
-  .nav-link { padding: 8px 11px; font-size: 0.8438rem; }
+  .nav { gap: 2px; }
+  .nav-link { padding: 8px 9px; font-size: 0.8438rem; }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .nav, .hide-mobile { display: none; }
   .burger { display: flex; }
   .header .logo-text small { display: block; }
+}
+
+@media (max-width: 1400px) {
   .concept-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -1812,7 +1816,8 @@ html:is([data-a11y-text="130"], [data-a11y-text="150"]) .situation-tabs { grid-t
 :root[data-theme="light"] .essay-meta em, :root[data-theme="light"] .essay-title { color: #0e7490; }
 
 /* ---------- Комментарии ---------- */
-.comments-card { padding: 30px; margin-top: 0; }
+.comments-card { padding: 30px; max-width: 900px; margin: 0 auto; }
+.nav-link.nav-link-accent:not(.active) { color: var(--cyan-400); font-weight: 700; }
 .comments-card h3 { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; margin-bottom: 8px; }
 .comments-card h3 svg { color: var(--cyan-400); }
 .comments-sub { color: var(--text-2, inherit); opacity: .85; margin-bottom: 16px; }

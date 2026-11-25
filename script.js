@@ -237,6 +237,9 @@ window.I18N = {
       'an.demo': 'Demo data',
       'an.topicsNote': 'Illustrative data to demonstrate the chart. Not official statistics.',
 
+      'cmt.eyebrow': 'Your opinion',
+      'nav.comments': 'Comments',
+      'hero.comment': 'Leave a comment',
       'cmt.title': 'Comments',
       'cmt.sub': 'Leave feedback about the site, your thoughts on the essays or an idea for the project.',
       'cmt.note': 'Comments are <b>public</b>: every visitor can see them. To post, sign in with GitHub. Do not share personal data or accuse specific people here — to report corruption, call <a href="tel:1424">1424</a> or use <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a>.',
@@ -613,6 +616,9 @@ window.I18N = {
       'an.demo': 'Демо-деректер',
       'an.topicsNote': 'Диаграмманың жұмысын көрсетуге арналған шартты деректер. Ресми статистика емес.',
 
+      'cmt.eyebrow': 'Сіздің пікіріңіз',
+      'nav.comments': 'Пікірлер',
+      'hero.comment': 'Пікір қалдыру',
       'cmt.title': 'Пікірлер',
       'cmt.sub': 'Сайт туралы пікіріңізді, эсселер туралы ойыңызды немесе жобаға идеяңызды қалдырыңыз.',
       'cmt.note': 'Пікірлер <b>ашық</b>: оларды сайтқа кірген барлық адам көреді. Жазу үшін GitHub арқылы кіру керек. Мұнда жеке деректерді жазбаңыз және нақты адамдарды айыптамаңыз — сыбайлас жемқорлық туралы хабарлау үшін <a href="tel:1424">1424</a> нөміріне қоңырау шалыңыз немесе <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a> сайтын пайдаланыңыз.',
