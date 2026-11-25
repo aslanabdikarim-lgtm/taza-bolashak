@@ -7400,8 +7400,8 @@ const comments = {
   config: {
     repo: 'aslanabdikarim-lgtm/taza-bolashak',
     repoId: 'R_kgDOVpYbxg',
-    category: 'General',
-    categoryId: '' /* заполняется после включения Discussions в репозитории */
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOVpYbxs4DL7Bf'
   },
   loaded: false,
 
