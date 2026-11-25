@@ -35,9 +35,9 @@
    ========================================================= */
 window.I18N = {
   langs: {
-    ru: { locale: 'ru-RU', name: 'Русский', title: 'Таза болашақ — Чистое будущее начинается с нас' },
-    en: { locale: 'en-US', name: 'English', title: 'Taza Bolashaq — A Clean Future Starts With Us' },
-    kk: { locale: 'kk-KZ', name: 'Қазақша', title: 'Таза болашақ — бізден басталады' }
+    ru: { locale: 'ru-RU', name: 'Русский', title: 'Таза болашақ П-11 — Чистое будущее начинается с нас' },
+    en: { locale: 'en-US', name: 'English', title: 'Taza Bolashaq P-11 — A Clean Future Starts With Us' },
+    kk: { locale: 'kk-KZ', name: 'Қазақша', title: 'Таза болашақ П-11 — бізден басталады' }
   },
 
   /* ---------------------------------------------------------
