@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&family=Russo+One&family=Rubik:wght@500;700;900&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=15" />
+  <link rel="stylesheet" href="style.css?v=16" />
   <script>
     /* Применяем сохранённые тему и язык до отрисовки, чтобы не было мигания */
     (function () {
@@ -1091,6 +1091,18 @@
             <button type="submit" class="btn btn-primary btn-block"><i data-lucide="user-plus"></i><span data-i18n="vol.join">Присоединиться</span></button>
           </form>
         </div>
+
+        <div class="comments-card glass reveal" id="comments">
+          <h3><i data-lucide="messages-square"></i><span data-i18n="cmt.title">Комментарии</span></h3>
+          <p class="comments-sub" data-i18n="cmt.sub">Оставьте отзыв о сайте, мнение об эссе или идею для проекта.</p>
+          <div class="alert alert-info">
+            <i data-lucide="info"></i>
+            <p data-i18n-html="cmt.note">Комментарии <b>публичные</b>: их видят все посетители. Чтобы написать, нужно войти через GitHub. Не пишите здесь личные данные и жалобы на конкретных людей — для сообщений о коррупции звоните <a href="tel:1424">1424</a> или используйте <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a>.</p>
+          </div>
+          <div class="comments-frame" id="commentsFrame">
+            <p class="comments-wait" id="commentsWait" data-i18n="cmt.loading">Комментарии загружаются…</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -1320,6 +1332,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-  <script src="script.js?v=15"></script>
+  <script src="script.js?v=16"></script>
 </body>
 </html>

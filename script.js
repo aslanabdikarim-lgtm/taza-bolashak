@@ -237,6 +237,12 @@ window.I18N = {
       'an.demo': 'Demo data',
       'an.topicsNote': 'Illustrative data to demonstrate the chart. Not official statistics.',
 
+      'cmt.title': 'Comments',
+      'cmt.sub': 'Leave feedback about the site, your thoughts on the essays or an idea for the project.',
+      'cmt.note': 'Comments are <b>public</b>: every visitor can see them. To post, sign in with GitHub. Do not share personal data or accuse specific people here — to report corruption, call <a href="tel:1424">1424</a> or use <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a>.',
+      'cmt.loading': 'Loading comments…',
+      'cmt.soon': 'Comments will be switched on soon.',
+      'cmt.error': 'Comments could not be loaded. Check your connection and refresh the page.',
       'cm.eyebrow': 'Together',
       'cm.title': 'Community & feedback',
       'cm.text': 'Share an idea, ask a question or join our volunteers.',
@@ -607,6 +613,12 @@ window.I18N = {
       'an.demo': 'Демо-деректер',
       'an.topicsNote': 'Диаграмманың жұмысын көрсетуге арналған шартты деректер. Ресми статистика емес.',
 
+      'cmt.title': 'Пікірлер',
+      'cmt.sub': 'Сайт туралы пікіріңізді, эсселер туралы ойыңызды немесе жобаға идеяңызды қалдырыңыз.',
+      'cmt.note': 'Пікірлер <b>ашық</b>: оларды сайтқа кірген барлық адам көреді. Жазу үшін GitHub арқылы кіру керек. Мұнда жеке деректерді жазбаңыз және нақты адамдарды айыптамаңыз — сыбайлас жемқорлық туралы хабарлау үшін <a href="tel:1424">1424</a> нөміріне қоңырау шалыңыз немесе <a href="https://eotinish.kz" target="_blank" rel="noopener">eOtinish.kz</a> сайтын пайдаланыңыз.',
+      'cmt.loading': 'Пікірлер жүктелуде…',
+      'cmt.soon': 'Пікірлер жақында іске қосылады.',
+      'cmt.error': 'Пікірлер жүктелмеді. Интернетті тексеріп, бетті жаңартыңыз.',
       'cm.eyebrow': 'Бірге',
       'cm.title': 'Қоғамдастық және кері байланыс',
       'cm.text': 'Идеяңызбен бөлісіңіз, сұрақ қойыңыз немесе еріктілерге қосылыңыз.',
@@ -7382,6 +7394,92 @@ const a11y = {
 };
 
 /* ---------- 16. Инициализация ---------- */
+
+/* ---------- Комментарии (Giscus: хранятся в GitHub Discussions репозитория) ---------- */
+const comments = {
+  config: {
+    repo: 'aslanabdikarim-lgtm/taza-bolashak',
+    repoId: 'R_kgDOVpYbxg',
+    category: 'General',
+    categoryId: '' /* заполняется после включения Discussions в репозитории */
+  },
+  loaded: false,
+
+  theme() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'transparent_dark';
+  },
+  lang() {
+    return i18n.lang === 'en' ? 'en' : 'ru';
+  },
+  ruText: {
+    soon: 'Комментарии скоро будут включены.',
+    error: 'Не удалось загрузить комментарии. Проверьте интернет и обновите страницу.'
+  },
+  msg(key) {
+    const ui = (window.I18N.ui || {})[i18n.lang] || {};
+    return (i18n.lang !== 'ru' && ui['cmt.' + key]) || this.ruText[key];
+  },
+  showStatus(key) {
+    const wait = $('#commentsWait');
+    if (wait) {
+      wait.removeAttribute('data-i18n');
+      wait.dataset.cmtKey = key;
+      wait.textContent = this.msg(key);
+    }
+  },
+
+  init() {
+    const frame = $('#commentsFrame');
+    if (!frame) return;
+    if (!this.config.categoryId) {
+      this.showStatus('soon');
+    } else if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) { io.disconnect(); this.load(); }
+      }, { rootMargin: '400px 0px' });
+      io.observe(frame);
+    } else {
+      this.load();
+    }
+    i18n.onChange(() => {
+      const wait = $('#commentsWait');
+      if (wait && wait.dataset.cmtKey) wait.textContent = this.msg(wait.dataset.cmtKey);
+      this.send({ lang: this.lang() });
+    });
+    new MutationObserver(() => this.send({ theme: this.theme() }))
+      .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  },
+
+  load() {
+    if (this.loaded) return;
+    this.loaded = true;
+    const c = this.config;
+    const s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    const attrs = {
+      'data-repo': c.repo, 'data-repo-id': c.repoId,
+      'data-category': c.category, 'data-category-id': c.categoryId,
+      'data-mapping': 'specific', 'data-term': 'Пікірлер / Комментарии',
+      'data-strict': '1', 'data-reactions-enabled': '1', 'data-emit-metadata': '0',
+      'data-input-position': 'top', 'data-theme': this.theme(), 'data-lang': this.lang(),
+      'data-loading': 'lazy'
+    };
+    Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
+    s.onerror = () => this.showStatus('error');
+    s.onload = () => { const w = $('#commentsWait'); if (w) w.remove(); };
+    $('#commentsFrame').appendChild(s);
+  },
+
+  send(cfg) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage({ giscus: { setConfig: cfg } }, 'https://giscus.app');
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   $('#year').textContent = new Date().getFullYear();
 
@@ -7415,6 +7513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeedbackForm();
   faq.init();
   initVolunteerForm();
+  comments.init();
   assistant.init();
   a11y.init();
 

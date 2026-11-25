@@ -1810,3 +1810,13 @@ html:is([data-a11y-text="130"], [data-a11y-text="150"]) .situation-tabs { grid-t
 /* Светлая тема: акцентный голубой темнее, чтобы текст этим цветом читался на белом */
 :root[data-theme="light"] { --cyan-400: #0e7490; }
 :root[data-theme="light"] .essay-meta em, :root[data-theme="light"] .essay-title { color: #0e7490; }
+
+/* ---------- Комментарии ---------- */
+.comments-card { padding: 30px; margin-top: 0; }
+.comments-card h3 { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; margin-bottom: 8px; }
+.comments-card h3 svg { color: var(--cyan-400); }
+.comments-sub { color: var(--text-2, inherit); opacity: .85; margin-bottom: 16px; }
+.comments-frame { min-height: 80px; }
+.comments-wait { padding: 18px; text-align: center; opacity: .75; border: 1px dashed rgba(148, 163, 184, .35); border-radius: 14px; }
+.comments-frame .giscus, .comments-frame .giscus-frame { width: 100%; }
+@media (max-width: 600px) { .comments-card { padding: 20px; } }
